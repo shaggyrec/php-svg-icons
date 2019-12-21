@@ -1,0 +1,28 @@
+{
+    "name": "shaggyrec/php-svg-icons",
+    "description": "Svg icons api for php",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alexander Shogenov",
+            "email": "i@shagg.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Shaggyrec\\SvgIcons\\": ["src"]
+        },
+        "files": [
+            "src/Icons.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Shaggyrec\\SvgIcons\\Test\\": "tests/lib/Test"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    }
+}
