@@ -1,5 +1,7 @@
 # PHP SVG ICONS
 
+[![Build Status](https://travis-ci.org/shaggyrec/php-svg-icons.svg?branch=master)](https://travis-ci.org/shaggyrec/php-svg-icons)
+
 ### The library for providing svg icons to the php
 
 ## Install
