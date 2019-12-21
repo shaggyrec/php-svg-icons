@@ -2,6 +2,16 @@
 
 namespace Shaggyrec\SvgIcons;
 
+use function Shaggyrec\SvgIcons\functions\iconsDir;
+use function Shaggyrec\SvgIcons\functions\setColor;
+
+/**
+ * @param string $name
+ * @param string|null $color
+ * @param int|null $width
+ * @param int|null $height
+ * @return string
+ */
 function icon(string $name, ?string $color = null, ?int $width = null, ?int $height = null): string
 {
     $doc = new \DOMDocument();
@@ -20,6 +30,13 @@ function icon(string $name, ?string $color = null, ?int $width = null, ?int $hei
     return $doc->C14N();
 }
 
+/**
+ * @param string|null $searchString
+ * @param string|null $color
+ * @param int|null $width
+ * @param int|null $height
+ * @return array
+ */
 function icons(?string $searchString = null, ?string $color = null, ?int $width = null, ?int $height = null): array
 {
     return array_map(
@@ -41,16 +58,4 @@ function icons(?string $searchString = null, ?string $color = null, ?int $width 
             }
         ))
     );
-}
-
-function setColor(\DOMNodeList $elements, string $color): void
-{
-    foreach ($elements as $element) {
-        $element->setAttribute('fill', $color);
-    }
-}
-
-function iconsDir(): string
-{
-    return __DIR__ . '/../icons/';
 }

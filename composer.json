@@ -13,7 +13,8 @@
             "Shaggyrec\\SvgIcons\\": ["src"]
         },
         "files": [
-            "src/Icons.php"
+            "src/icons.php",
+            "src/functions.php"
         ]
     },
     "autoload-dev": {
