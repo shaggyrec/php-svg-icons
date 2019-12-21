@@ -1,6 +1,7 @@
 {
     "name": "shaggyrec/php-svg-icons",
     "description": "Svg icons api for php",
+    "version": "1.0.0",
     "type": "library",
     "authors": [
         {
