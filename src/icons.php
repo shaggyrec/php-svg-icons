@@ -41,12 +41,16 @@ function icons(?string $searchString = null, ?string $color = null, ?int $width 
 {
     return array_map(
         static function ($icon) use ($color, $width, $height) {
-            return icon(
-                str_replace('.svg', '', $icon),
-                $color,
-                $width,
-                $height
-            );
+            $iconName = str_replace('.svg', '', $icon);
+            return [
+                'name' => $iconName,
+                'value' => icon(
+                    $iconName,
+                    $color,
+                    $width,
+                    $height
+                )
+            ];
         },
         array_values(array_filter(
             scandir(iconsDir()),

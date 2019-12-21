@@ -24,7 +24,7 @@ class SvgIconsTest extends TestCase
     {
         $this->assertStringContainsString(
             '<svg',
-            icons()[0]
+            icons()[0]['value']
         );
     }
 
@@ -34,10 +34,11 @@ class SvgIconsTest extends TestCase
         $this->assertCount(2, $icons);
         $this->assertStringContainsString(
             '',
-            $icons[0]
+            $icons[0]['value']
         );
-        $this->assertStringContainsString('width="24"', $icons[0]);
-        $this->assertStringContainsString('height="30"', $icons[0]);
-        $this->assertStringContainsString('fill="#e5e5e5"', $icons[1]);
+        $this->assertStringContainsString('twitch', $icons[0]['name']);
+        $this->assertStringContainsString('width="24"', $icons[0]['value']);
+        $this->assertStringContainsString('height="30"', $icons[0]['value']);
+        $this->assertStringContainsString('fill="#e5e5e5"', $icons[1]['value']);
     }
 }
