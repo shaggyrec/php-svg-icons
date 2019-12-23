@@ -43,4 +43,7 @@
     - [1] color (string, optional) - set color
     - [2] width (int, optional) - set width
     - [3] height (int, optional) - set height
-- returns the array of svg icons
+- returns the array of
+    ['name' => 'icon-name', 'value' => '<svg.....']
+    
+You can see all awailable icons in the `./icons` direcory
